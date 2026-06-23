@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""AudioSwitch — Switch macOS audio devices from your menu bar."""
+"""AudioClick — Switch macOS audio devices from your menu bar."""
 
 import rumps
 import threading
@@ -150,15 +150,15 @@ def create_icon():
     for r, a in [(4, 100), (7, 80), (10, 60)]:
         draw.arc([16+r, 12-r, 16+r*2, 20+r], 270, 90, fill=(100, 200, 255, a))
     
-    path = os.path.join(tempfile.gettempdir(), "audioswitch_icon.png")
+    path = os.path.join(tempfile.gettempdir(), "audioclick_icon.png")
     img.save(path, "PNG")
     return path
 
 
-class AudioSwitch(rumps.App):
+class AudioClick(rumps.App):
     def __init__(self):
         icon_path = create_icon()
-        super().__init__("AudioSwitch", icon=icon_path, template=False)
+        super().__init__("AudioClick", icon=icon_path, template=False)
         self.timer = rumps.Timer(self.refresh, 5)  # refresh every 5 seconds
         self.refresh()
         self.timer.start()
@@ -217,15 +217,15 @@ class AudioSwitch(rumps.App):
             try:
                 set_default_output(device['id'])
                 main_thread(lambda: rumps.notification(
-                    "AudioSwitch", f"🔊 {device['name']}",
+                    "AudioClick", f"🔊 {device['name']}",
                     "音频输出已切换 / Output switched"))
                 main_thread(lambda: self.refresh())
             except Exception as e:
                 main_thread(lambda: rumps.notification(
-                    "AudioSwitch", "❌ 切换失败", str(e)))
+                    "AudioClick", "❌ 切换失败", str(e)))
         threading.Thread(target=_do_switch, daemon=True).start()
 
 
 if __name__ == "__main__":
-    app = AudioSwitch()
+    app = AudioClick()
     app.run()

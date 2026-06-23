@@ -1,5 +1,5 @@
 
-<h1 align="center">AudioSwitch 🔊</h1>
+<h1 align="center">AudioClick 🔊</h1>
 
 <p align="center">
   <b>One-click macOS audio device switcher — from your menu bar.</b><br>
@@ -8,7 +8,7 @@
 
 <p align="center">
   <a href="#-快速开始--quick-start"><img src="https://img.shields.io/badge/🚀_一键安装-One_Command-blue?style=for-the-badge" alt="Install"></a>
-  <a href="https://github.com/Monah-Limited/AudioSwitch/stargazers"><img src="https://img.shields.io/github/stars/Monah-Limited/AudioSwitch?style=for-the-badge&logo=github" alt="Stars"></a>
+  <a href="https://github.com/Monah-Limited/AudioClick/stargazers"><img src="https://img.shields.io/github/stars/Monah-Limited/AudioClick?style=for-the-badge&logo=github" alt="Stars"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge" alt="MIT"></a>
   <br>
   <img src="https://img.shields.io/badge/macOS-✓-blue?logo=apple&logoColor=white" alt="macOS">
@@ -40,14 +40,14 @@
 
 ```bash
 # 克隆仓库
-git clone https://github.com/Monah-Limited/AudioSwitch.git
-cd AudioSwitch
+git clone https://github.com/Monah-Limited/AudioClick.git
+cd AudioClick
 
 # 安装依赖
 pip install -r requirements.txt
 
 # 运行
-python src/audioswitch.py
+python src/audioclick.py
 ```
 
 ### 使用 / Usage
@@ -74,10 +74,10 @@ python src/audioswitch.py
 
 ## 🔧 工作原理 / How It Works
 
-AudioSwitch 使用 macOS 的 **CoreAudio** 原生 API（而非 AppleScript），通过 `AudioHardwareGetProperty` / `AudioHardwareSetProperty` 直接枚举和切换音频设备。
+AudioClick 使用 macOS 的 **CoreAudio** 原生 API（而非 AppleScript），通过 `AudioHardwareGetProperty` / `AudioHardwareSetProperty` 直接枚举和切换音频设备。
 
 ```
-AudioSwitch (rumps) → CoreAudio API → macOS Audio System → New Device Active
+AudioClick (rumps) → CoreAudio API → macOS Audio System → New Device Active
 ```
 
 优点：
