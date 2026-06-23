@@ -1,0 +1,3 @@
+rumps>=0.4.0
+pyobjc-framework-CoreAudio>=10.0
+Pillow>=10.0.0
