@@ -87,13 +87,14 @@ AudioClick (rumps) → CoreAudio API → macOS Audio System → New Device Activ
 
 ---
 
-## 🛠️ 技术栈 / Tech Stack
+## 🙏 Credits / 致谢
 
-| 库 | 用途 |
-|----|------|
-| [rumps](https://github.com/jaredks/rumps) | macOS 菜单栏框架 |
-| [pyobjc-framework-CoreAudio](https://pypi.org/project/pyobjc-framework-CoreAudio/) | CoreAudio 原生 API |
-| [Pillow](https://python-pillow.org/) | 图标生成 |
+| Project | Role |
+|---------|------|
+| [rumps](https://github.com/jaredks/rumps) | macOS menu bar framework |
+| [pyobjc-framework-CoreAudio](https://pypi.org/project/pyobjc-framework-CoreAudio/) | macOS CoreAudio Python bindings |
+| [Pillow](https://python-pillow.org/) | Icon generation |
+| [Apple CoreAudio](https://developer.apple.com/documentation/coreaudio) | macOS audio device enumeration API |
 
 ---
 
